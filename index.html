@@ -1,17 +1,108 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+<html>
+  <head>
+    <title>WeatherApp</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9"
+      crossorigin="anonymous"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Inconsolata:wght@300;400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <script
+      src="https://kit.fontawesome.com/240d578970.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://unpkg.com/axios@1.1.2/dist/axios.min.js"></script>
+  
+    <link href="src/styles.css" />
+  </head>
+  <body>
+    <div class="container text-center">
+      <form id="search-form">
+        <div class="searchCity">
+          <input type="text" placeholder="Enter City" id="search-text-input" autocomplete="off"/>
+          <input type="submit" value="Search"/>
+          <input type="submit" value="Current Location" id="currentLocationSearch"/>
+        </div>
+      </form>
+      <hr />
 
-<link rel="stylesheet" href="style.css">
-</head>
-<body>
+      <div class="row align-items-start">
+        <div class="col-4">
+          <i class="fa-solid fa-cloud-sun cloudy-day"></i>
+          
+          <div class="temperature-today" >
+            <strong id="temperature">º</strong>  
+            <span class="units">
+              <a href="#" id="celsius-link">ºC</a> | 
+              <a href="#" id="fahrenheit-link">ºF</a> 
+            </span>
+            </div>
+          
+            <div class="typeofday">  <strong id="description"></strong></div>
+            
+          
+        </div>
+        <div class="col-4">
+          <div class ="day-today" id="dayoftheweek">
+          </div> 
+           <hr />
+            <div class="highandlow">
+            <strong> High: </strong> <span id="highTemp"></span>º<br />
+            <strong> Low: </strong> <span id="lowTemp"></span>º</div> 
+            
+            
+          </div>
+        <div class="col-4">
+          <div class = "location"> <strong id ="locations"></strong>
+        </div>
+        <p>
+              
+              <strong> Humidity:<span id="humidity"></span> %</strong>  <br />
+              <strong> Wind:<span id="wind"></span> km/h</strong> 
+            </p>
+</div>
+      <hr />
 
-  <h1>
-    Hello Git
-  </h1>
-  <script src="script.js"></script>
-</body>
+      <div class="row align-items-start text-center weekdays">
+        <div class="col-3">
+          <div class="thursday">
+           <strong> Thursday </strong><br />
+            <i class="fa-solid fa-cloud-sun-rain"></i> 
+            <br>
+             H:26º  L:13º
+          </div>
+        </div>
+        <div class="col-2">
+          <div class="friday"><strong> Friday </strong></br> 
+            <i class="fa-solid fa-cloud-bolt"></i>
+             <br>
+             H:23º  L:15º
+          </div>
+        </div>
+        <div class="col-3">
+          <div class="saturday"><strong> Saturday </strong> <br>
+            <i class="fa-solid fa-cloud-rain"></i> <br>
+            H:24º  L:17º
+          </div>
+        </div>
+        <div class="col-2">
+          <div class="sunday"><strong> Sunday </strong></div>  <i class="fa-solid fa-sun"></i> <br> H:27º L:22º
+          
+        </div>
+        <div class="col-2">
+          <div class="monday"><strong> Monday </strong></div> <i class="fa-solid fa-sun"></i> <br> H:28º L:22º
+        </div>
+      </div>
+    </div>
+    <script src="src/index.js"></script>
+  </body>
 </html>

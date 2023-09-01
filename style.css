@@ -1,4 +1,86 @@
-h1 {
+.container {
+  max-width: 720px;
+  background-color: #ffb677;
+  border: 2px solid #57385c;
+  margin: 50px auto;
+  padding: 20px;
+
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+input {
+background-color: #e8751a;
+  color: #57385c;
+  padding: 7px 15px;
+  margin: 8px 0;
+  border-radius: 6px;
+  border: 2px solid #57385c
+}
+
+body {
+  font-family: "Inconsolata", monospace;
+}
+
+
+.cloudy-day {
+  font-size: 100px;
+  color: #e8751a;
+  margin-top: -5px;
+}
+
+.day-today {
+  font-size: 25px;
+  font-weight: bold;
+  color: #57385c;
+  margin-left: -15px;
+  margin-top: 45px;
+}
+.time {
+  font-size: 20px;
+  color: #57385c;
+  margin-left: -15px;
+}
+.highandlow{
+  font-size: 20px;
+  color: #57385c;
+  margin-left: -15px;
+  
+  
+}
+p {
+
+  font-size: 20px;
+  color: #57385c;
+  
+}
+.temperature-today {
+  font-size: 25px;
+  color: #57385c;
+  margin-top: 20px;
+  
+}
+.typeofday {
+  font-size: 25px;
+  color: #57385c;
+ }  
+  .units{
+position: relative;
+font-size: 18px;
+top:-7px
+   }
+
+
+.location {
+  padding: 10px;
+  font-size: 40px;
   text-align: center;
-  color: blueviolet;
+  color: rgb(76, 48, 80);
+  display: block;
+}
+
+
+.weekdays {
+  color: #57385c;
+  font-size: 17px;
+  margin-right: 0;
 }
