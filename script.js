@@ -1,23 +1,42 @@
-function formatDate() {
-  let now = new Date();
-  let hours = now.getHours();
-  if (hours < 10) {
-    hours = `0${hours}`;
-  }
-  let minutes = now.getMinutes();
-  if (minutes < 10) {
-    minutes = `0${minutes}`;
-  }
-  let date = now.getDate();
-  let day = now.getDay();
-
-  let days = ["Sunday", "Monday", "Tuesda", "Wednesday", "Thursday", "Friday", "Saturday"];
-  day = days[now.getDay()];
-  return `${day} ${date}, ${hours}:${minutes}`;
+let now = new Date();
+let hours = now.getHours();
+if (hours < 10) {
+  hours = `0${hours}`;
 }
+let minutes = now.getMinutes();
+if (minutes < 10) {
+  minutes = `0${minutes}`;
+}
+let date = now.getDate();
+let day = now.getDay();
+let days = [
+  "Sunday",
+  "Monday",
+  "Tuesday",
+  "Wednesday",
+  "Thursday",
+  "Friday",
+  "Saturday",
+];
+day = days[now.getDay()];
+let months = [
+  "Jan",
+  "Feb",
+  "Mar",
+  "Apr",
+  "May",
+  "Jun",
+  "Jul",
+  "Aug",
+  "Sep",
+  "Oct",
+  "Nov",
+  "Dec",
+];
+let month = months[now.getMonth()];
 
 let dayoftheweek = document.querySelector("#dayoftheweek");
-dayoftheweek.innerHTML = formatDate();
+dayoftheweek.innerHTML = `${day}, ${date} ${month}. ${hours}:${minutes}`;
 document.querySelector("#dayoftheweek").classList.add("dayToday");
 
 function displayWeatherCondition(response) {
