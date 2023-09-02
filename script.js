@@ -11,7 +11,7 @@ function formatDate() {
   let date = now.getDate();
   let day = now.getDay();
 
-  let days = ["Sunday", "Monday", "Tuesda", "Wednesday", "Friday", "Saturday"];
+  let days = ["Sunday", "Monday", "Tuesda", "Wednesday", "Thursday", "Friday", "Saturday"];
   day = days[now.getDay()];
   return `${day} ${date}, ${hours}:${minutes}`;
 }
