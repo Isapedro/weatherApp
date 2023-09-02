@@ -84,3 +84,9 @@ top:-7px
   font-size: 17px;
   margin-right: 0;
 }
+.page-info{
+  color: #57385c;
+  display: block;
+  text-align: center;
+  margin-top: 20px;
+}
