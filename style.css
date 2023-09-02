@@ -2,25 +2,23 @@
   max-width: 720px;
   background-color: #ffb677;
   border: 2px solid #57385c;
-  margin: 50px auto;
+  margin-top: 50px;
   padding: 20px;
-
   border-radius: 10px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 input {
-background-color: #e8751a;
+  background-color: #e8751a;
   color: #57385c;
   padding: 7px 15px;
   margin: 8px 0;
   border-radius: 6px;
-  border: 2px solid #57385c
+  border: 2px solid #57385c;
 }
 
 body {
   font-family: "Inconsolata", monospace;
 }
-
 
 .cloudy-day {
   font-size: 100px;
@@ -40,35 +38,29 @@ body {
   color: #57385c;
   margin-left: -15px;
 }
-.highandlow{
+.highandlow {
   font-size: 20px;
   color: #57385c;
   margin-left: -15px;
-  
-  
 }
 p {
-
   font-size: 20px;
   color: #57385c;
-  
 }
 .temperature-today {
   font-size: 25px;
   color: #57385c;
   margin-top: 20px;
-  
 }
 .typeofday {
   font-size: 25px;
   color: #57385c;
- }  
-  .units{
-position: relative;
-font-size: 18px;
-top:-7px
-   }
-
+}
+.units {
+  position: relative;
+  font-size: 18px;
+  top: -7px;
+}
 
 .location {
   padding: 10px;
@@ -78,15 +70,16 @@ top:-7px
   display: block;
 }
 
-
 .weekdays {
   color: #57385c;
   font-size: 17px;
   margin-right: 0;
 }
-.page-info{
+.page-info {
   color: #57385c;
   display: block;
   text-align: center;
-  margin-top: 20px;
+  font-size: 10px;
+  margin-top: 10px;
+  padding: 20px 0;
 }
