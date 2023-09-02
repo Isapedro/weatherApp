@@ -59,9 +59,9 @@ function displayWeatherCondition(response) {
     response.data.weather[0].main;
 }
 function searchCity(city) {
-  let apiKey = "8543f1a82410676e3d23debd07622840";
+  let apiKey = "3o10257bf2td10cc46640fa6c8aad2c3";
   let units = "metric";
-  let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&units=${units}&appid=${apiKey}`;
+  let apiUrl = `https://api.shecodes.io/weather/v1/current?query=${city}&units=${units}&appid=${apiKey}`;
   axios.get(apiUrl).then(displayWeatherCondition);
 }
 
@@ -96,8 +96,8 @@ function showPosition(position) {
   let lat = position.coords.latitude;
   let lon = position.coords.longitude;
   let units = "metric";
-  let apiKey = "8543f1a82410676e3d23debd07622840";
-  let apiUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${apiKey}&units=${units}`;
+  let apiKey = "3o10257bf2td10cc46640fa6c8aad2c3";
+  let apiUrl = `https://api.shecodes.io/weather/v1/current?lon={lon}&lat={lat}&key={key}&units=${units}`;
   axios.get(apiUrl).then(displayWeatherCondition);
 }
 
