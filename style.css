@@ -1,4 +1,5 @@
 .container {
+  position: relative;
   max-width: 720px;
   background-color: #ffb677;
   border: 2px solid #57385c;
@@ -77,6 +78,7 @@ p {
 }
 .page-info {
   color: #57385c;
+  position: absolute;
   display: block;
   text-align: center;
   font-size: 15px;
