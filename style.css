@@ -25,7 +25,9 @@ body {
   font-size: 100px;
   color: #e8751a;
   margin-top: -5px;
+  
 }
+
 
 .day-today {
   font-size: 25px;
@@ -56,6 +58,7 @@ p {
 .typeofday {
   font-size: 25px;
   color: #57385c;
+  text-transform: capitalize;
 }
 .units {
   position: relative;
