@@ -40,23 +40,29 @@ dayoftheweek.innerHTML = `${day}, ${date} ${month}. ${hours}:${minutes}`;
 document.querySelector("#dayoftheweek").classList.add("dayToday");
 
 function displayWeatherCondition(response) {
-  document.querySelector("#locations").innerHTML = response.data.name;
+  document.querySelector("#locations").innerHTML = response.data.city;
   document.querySelector("#temperature").innerHTML = Math.round(
-    response.data.main.temp
+    response.data.temperature.current
   );
   document.querySelector("#highTemp").innerHTML = Math.round(
-    response.data.main.temp_max
+    response.data.daily[1].temperature.maximum
   );
   document.querySelector("#lowTemp").innerHTML = Math.round(
-    response.data.main.temp_min
+   response.data.daily[1].temperature.minimum
   );
-  document.querySelector("#humidity").innerHTML = response.data.main.humidity;
+  document.querySelector("#humidity").innerHTML = response.data.temperature.humidity;
   document.querySelector("#wind").innerHTML = Math.round(
     response.data.wind.speed
   );
 
   document.querySelector("#description").innerHTML =
-    response.data.weather[0].main;
+    response.data.condition.description;
+let iconElement = document.querySelector("#icon")
+iconElement.setAttribute(
+  "src",
+  `http://shecodes-assets.s3.amazonaws.com/api/weather/icons/${response.data.condition.icon}.png`
+);
+
 }
 function searchCity(city) {
   let apiKey = "3o10257bf2td10cc46640fa6c8aad2c3";
@@ -97,7 +103,7 @@ function showPosition(position) {
   let lon = position.coords.longitude;
   let units = "metric";
   let apiKey = "3o10257bf2td10cc46640fa6c8aad2c3";
-  let apiUrl = `https://api.shecodes.io/weather/v1/current?lon={lon}&lat={lat}&key={key}&units=${units}`;
+  let apiUrl = `https://api.shecodes.io/weather/v1/current?lon=${lon}&lat=${lat}&key=${apiKey}&units=${units}`;
   axios.get(apiUrl).then(displayWeatherCondition);
 }
 
