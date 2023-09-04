@@ -1,6 +1,6 @@
 .container {
   position: relative;
-  max-width: 720px;
+  max-width: 750px;
   background-color: #ffb677;
   border: 2px solid #57385c;
   margin-top: 50px;
@@ -53,7 +53,7 @@ p {
 .temperature-today {
   font-size: 25px;
   color: #57385c;
-  margin-top: 20px;
+  margin-top: 0px;
 }
 .typeofday {
   font-size: 25px;
@@ -72,6 +72,11 @@ p {
   text-align: center;
   color: rgb(76, 48, 80);
   display: block;
+  background-color: #e8751a;
+  border: #57385c 2px solid;
+  border-radius: 6px;
+  margin-top: 40px;
+  margin-bottom: 30px;
 }
 
 .weekdays {
