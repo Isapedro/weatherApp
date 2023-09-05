@@ -93,3 +93,10 @@ p {
   margin-top: 20px;
   margin-bottom: 0;
 }
+.temperature-today.active {
+  color: rgb(33, 33, 33);
+  cursor: default;
+}
+
+.temperature-today.active:hover {
+  text-decoration: none;}

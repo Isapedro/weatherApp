@@ -62,7 +62,9 @@ let iconElement = document.querySelector("#icon");
 iconElement.setAttribute(
   "src",`http://shecodes-assets.s3.amazonaws.com/api/weather/icons/${response.data.condition.icon}.png`
 );
-
+let temperatureElement = document.querySelector("#temperature");
+celsiusTemperature= response.data.temperature.current;
+temperatureElement.innerHTML = Math.round(celsiusTemperature);
 }
 function searchCity(city) {
   let apiKey = "bd79ao40tde3dec118ca46bc3e6dd55f";
@@ -82,14 +84,20 @@ form.addEventListener("submit", handleSubmit);
 function convertToFahrenheit(event) {
   event.preventDefault();
   let temperatureElement = document.querySelector("#temperature");
-  temperatureElement.innerHTML = 66;
+  celsiusLink.classList.remove("active");
+  fahrenheitLink.classList.add("active");
+  let fahrenheitTemperature=(celsiusTemperature *9)/5+32;
+  temperatureElement.innerHTML= Math.round(fahrenheitTemperature);
 }
 
 function convertToCelsius(event) {
   event.preventDefault();
+  celsiusLink.classList.add("active");
+  fahrenheitLink.classList.remove("active");
   let temperatureElement = document.querySelector("#temperature");
-  temperatureElement.innerHTML = 19;
+  temperatureElement.innerHTML = Math.round(celsiusTemperature);
 }
+let celsiusTemperature = null;
 
 let fahrenheitLink = document.querySelector("#fahrenheit-link");
 fahrenheitLink.addEventListener("click", convertToFahrenheit);
