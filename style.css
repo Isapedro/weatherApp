@@ -79,10 +79,20 @@ p {
   margin-bottom: 30px;
 }
 
-.weekdays {
+.weather-forecast {
   color: #57385c;
-  font-size: 17px;
+  font-size: 18px;
   margin-right: 0;
+  text-align: center;
+}
+.weather-forecast-temperatures{
+  font-size: 15px;
+}
+.weather-forecast-temperatures-max{
+  font-weight: bold;
+}
+.weather-forecast-temperatures-min{
+  opacity: 0.7;
 }
 .page-info {
   color: #57385c;

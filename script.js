@@ -120,4 +120,30 @@ function submitCurrent(event) {
   event.preventDefault();
   navigator.geolocation.getCurrentPosition(showPosition);
 }
+function displayForecast() {
+  let forecastElement = document.querySelector("#forecast");
+  let days = ["Thursday", "Friday", "Saturday", "Sunday", "Monday", "Tuesday"];
+  let forecastHTML = `<div class="row">`;
+  days.forEach(function (day) {
+    forecastHTML =
+      forecastHTML +
+      `
+  <div class="col-2">
+  <div class="weather-forecast-date">
+   <strong> ${day} </strong> </div>
+   <img src="http://shecodes-assets.s3.amazonaws.com/api/weather/icons/rain-day.png" alt="rain-day" id="icons" width="50px">
+    <div class = "weather-forecast-temperatures">
+     <span class=weather-forecast-temperature-max> 
+       28º</span> 
+     <span class=weather-forecast-temperature-min> 
+        13º </span>
+  </div>
+</div>
+`;
+  });
+
+  forecastHTML = forecastHTML + `</div>`;
+  forecastElement.innerHTML = forecastHTML;
+}
 searchCity("munich");
+displayForecast();
