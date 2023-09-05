@@ -1,14 +1,13 @@
-let now = new Date();
-let hours = now.getHours();
+function formatDate(timestamp) {
+let date= new Date(timestamp);
+let hours = date.getHours();
 if (hours < 10) {
   hours = `0${hours}`;
 }
-let minutes = now.getMinutes();
+let minutes = date.getMinutes();
 if (minutes < 10) {
   minutes = `0${minutes}`;
 }
-let date = now.getDate();
-let day = now.getDay();
 let days = [
   "Sunday",
   "Monday",
@@ -18,29 +17,17 @@ let days = [
   "Friday",
   "Saturday",
 ];
-day = days[now.getDay()];
-let months = [
-  "Jan",
-  "Feb",
-  "Mar",
-  "Apr",
-  "May",
-  "Jun",
-  "Jul",
-  "Aug",
-  "Sep",
-  "Oct",
-  "Nov",
-  "Dec",
-];
-let month = months[now.getMonth()];
+let day = days[date.getDay()];
+return `${day} ${hours}:${minutes}`;
+}
+
 
 let dayoftheweek = document.querySelector("#dayoftheweek");
-dayoftheweek.innerHTML = `${day}, ${date} ${month}. ${hours}:${minutes}`;
+dayoftheweek.innerHTML = `${day}, ${date}. ${hours}:${minutes}`;
 document.querySelector("#dayoftheweek").classList.add("dayToday");
 
 function formatDay(timestamp) {
-  let date = new Date(timestamp*1000);
+  let date = new Date(timestamp * 1000);
   let day = date.getDay();
   let days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday"];
   return days[day];
