@@ -69,7 +69,7 @@ iconElement.setAttribute(
 let temperatureElement = document.querySelector("#temperature");
 celsiusTemperature= response.data.temperature.current;
 temperatureElement.innerHTML = Math.round(celsiusTemperature);
-getForecast(response.data.coord);
+getForecast(response.data.coordinates);
 }
 
 
@@ -131,7 +131,7 @@ function submitCurrent(event) {
 function getForecast(coordinates) {
   console.log(coordinates);
   let apiKey = "bd79ao40tde3dec118ca46bc3e6dd55f";
-  let apiUrl = `https://api.shecodes.io/weather/v1/forecast?lon=${coordinates.lon}&lat=${coordinates.lat}&key=${apiKey}&units=metric`;
+  let apiUrl = `https://api.shecodes.io/weather/v1/forecast?lon=${coordinates.longitude}&lat=${coordinates.latatitude}&key=${apiKey}&units=metric`;
   axios.get(apiUrl).then(displayForecast);
 }
 function displayForecast(response) {
@@ -145,12 +145,12 @@ function displayForecast(response) {
       forecastHTML +
       `
   <div class="col-2">
-  <div class="weather-forecast-date">${formatDay(forecastDay.dt)} </div>
-   <img src="http://shecodes-assets.s3.amazonaws.com/api/weather/icons/rain-day.png" alt="rain-day" id="icons" width="50px">
+  <div class="weather-forecast-date">${formatDay(forecastDay.time)} </div>
+   <img src="http://shecodes-assets.s3.amazonaws.com/api/weather/icons/${forecastDay.condition.icon}.png" alt="" id="icons" width="50px">
     <div class = "weather-forecast-temperatures">
-     <span class= "weather-forecast-temperature-max"> ${Math.round(forecastDay.temp.max)} 
+     <span class= "weather-forecast-temperature-max"> ${Math.round(forecastDay.temperature.maximum)} 
        º</span> 
-     <span class= "weather-forecast-temperature-min"> ${Math.round(forecastDay.temp.min)} 
+     <span class= "weather-forecast-temperature-min"> ${Math.round(forecastDay.temperature.minimum)} 
         º </span>
   </div>
 </div>
