@@ -51,7 +51,7 @@ p {
   color: #57385c;
 }
 .temperature-today {
-  font-size: 25px;
+  font-size: 30px;
   color: #57385c;
   margin-top: 0px;
 }
@@ -62,8 +62,8 @@ p {
 }
 .units {
   position: relative;
-  font-size: 18px;
-  top: -7px;
+  font-size: 17px;
+  top: -10px;
 }
 
 .location {
@@ -93,10 +93,11 @@ p {
   margin-top: 20px;
   margin-bottom: 0;
 }
-.temperature-today.active {
-  color: rgb(33, 33, 33);
+.active {
+  color: #57385c;;
   cursor: default;
+  text-decoration: none;
 }
 
-.temperature-today.active:hover {
+.active:hover {
   text-decoration: none;}
