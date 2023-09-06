@@ -43,10 +43,10 @@ function displayForecast(response) {
   <div class="weather-forecast-date">${formatDay(forecastDay.time)} </div>
    <img src="http://shecodes-assets.s3.amazonaws.com/api/weather/icons/${forecastDay.condition.icon}.png" alt="" id="icons" width="50px">
     <div class = "weather-forecast-temperatures">
-     <span class= "weather-forecast-temperature-max"> ${Math.round(forecastDay.temperature.maximum)} 
+     <span class= "weather-forecast-temperature-max">${Math.round(forecastDay.temperature.maximum)} 
        º</span> 
-     <span class= "weather-forecast-temperature-min"> ${Math.round(forecastDay.temperature.minimum)} 
-        º </span>
+     <span class= "weather-forecast-temperature-min">${Math.round(forecastDay.temperature.minimum)} 
+        º</span>
   </div>
 </div>
 `;
