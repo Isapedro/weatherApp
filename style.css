@@ -83,10 +83,7 @@ p {
   margin-right: 0;
   text-align: center;
 }
-.forecast-days{
-  font-weight: bolder;
-  font-size: 18px;
-}
+
 .weather-forecast-temperatures {
   font-size: 17px;
 }
