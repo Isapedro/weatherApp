@@ -31,7 +31,7 @@ body {
   font-weight: bold;
   color:#57385c;
   margin-left:-15px;
-  margin-top:32px;
+  margin-top: 30px;
 }
 .day-today {
   font-size: 30px;
@@ -39,6 +39,7 @@ body {
   color: #57385c;
   margin-left: -15px;
   margin-top: 0px;
+  margin-bottom: 0px;
 }
 
 p {
@@ -74,7 +75,7 @@ p {
   border: #57385c 2px solid;
   border-radius: 6px;
   margin-top: 77px;
-  margin-bottom: 30px;
+  margin-bottom: 25px;
 }
 
 .weather-forecast {
