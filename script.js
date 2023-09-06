@@ -40,7 +40,9 @@ function displayForecast(response) {
       forecastHTML +
       `
   <div class="col-2">
+  <div class="forecast-days>
   <div class="weather-forecast-date">${formatDay(forecastDay.time)} </div>
+  </div>
    <img src="http://shecodes-assets.s3.amazonaws.com/api/weather/icons/${forecastDay.condition.icon}.png" alt="" id="icons" width="50px">
     <div class = "weather-forecast-temperatures">
      <span class= "weather-forecast-temperature-max"> ${Math.round(forecastDay.temperature.maximum)} 

@@ -31,14 +31,14 @@ body {
   font-weight: bold;
   color:#57385c;
   margin-left:-15px;
-  margin-top:20px;
+  margin-top:32px;
 }
 .day-today {
   font-size: 30px;
   font-weight: bolder;
   color: #57385c;
   margin-left: -15px;
-  margin-top: 30px;
+  margin-top: 0px;
 }
 
 p {
@@ -55,6 +55,8 @@ p {
   font-size: 25px;
   color: #57385c;
   text-transform: capitalize;
+  margin-top: -15px;
+  margin-bottom: 15px;
 }
 .units {
   position: relative;
@@ -71,7 +73,7 @@ p {
   background-color: #e8751a;
   border: #57385c 2px solid;
   border-radius: 6px;
-  margin-top: 60px;
+  margin-top: 77px;
   margin-bottom: 30px;
 }
 
@@ -81,9 +83,12 @@ p {
   margin-right: 0;
   text-align: center;
 }
-.weather-forecast-temperatures {
-  font-size: 15px;
+.forecast-days{
   font-weight: bolder;
+  font-size: 18px;
+}
+.weather-forecast-temperatures {
+  font-size: 17px;
 }
 .weather-forecast-temperatures-max {
   font-weight: bold;
